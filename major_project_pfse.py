@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.graph_objects as go
+from plotly import graph_objects as go
 import wood_sections_module as wsm
 import calcs
 
