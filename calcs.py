@@ -165,6 +165,8 @@ def wood_sections_props(type_species_grade: str, bmin: int = 0, dmin: int = 0, b
 
     type = type_species_grade.split('_')[0]
     species = type_species_grade.split('_')[1]
+    if species == 'Northern':
+        species = 'Nor'
     grade = type_species_grade.split('_')[2]
 
     if type == 'SS' or type == 'BU':
