@@ -169,9 +169,9 @@ def wood_sections_props(type_species_grade: str, bmin: int = 0, dmin: int = 0, b
 
     if type == 'SS' or type == 'BU':
         IDX = pd.IndexSlice
-        wood_prop_df = pd.read_excel(r"C:\Users\stamo\pycode\Projects\Major_project_PFSE\wood properties.xlsx",'Solid sawn lumber and SCL prop',index_col=[0,1,2])
+        wood_prop_df = pd.read_excel(r"wood properties.xlsx",'Solid sawn lumber and SCL prop',index_col=[0,1,2])
         wood_prop_df = wood_prop_df.loc[IDX[:, species, grade], :]
-        sections_df = pd.read_excel(r"C:\Users\stamo\pycode\Projects\Major_project_PFSE\wood properties.xlsx",'Solid Sawn sections',index_col=[6])
+        sections_df = pd.read_excel(r"wood properties.xlsx",'Solid Sawn sections',index_col=[6])
         if section != None:
             sections_df = sections_df.loc[sections_df['Section'] == section]
         else:
@@ -182,9 +182,9 @@ def wood_sections_props(type_species_grade: str, bmin: int = 0, dmin: int = 0, b
 
     if type == 'BLC':
         IDX = pd.IndexSlice
-        wood_prop_df = pd.read_excel(r"C:\Users\stamo\pycode\Projects\Major_project_PFSE\wood properties.xlsx",'Glulam prop',index_col=[0,1])
+        wood_prop_df = pd.read_excel(r"wood properties.xlsx",'Glulam prop',index_col=[0,1])
         wood_prop_df = pd.DataFrame(wood_prop_df.loc[IDX[species, grade], :]).T
-        sections_df = pd.read_excel(r"C:\Users\stamo\pycode\Projects\Major_project_PFSE\wood properties.xlsx",'Glulam sections')
+        sections_df = pd.read_excel(r"wood properties.xlsx",'Glulam sections')
         if section != None:
             sections_df = sections_df.loc[sections_df['Section'] == section]
         else:
